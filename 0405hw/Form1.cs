@@ -14,16 +14,7 @@ namespace _0405hw
     {
         public Form1()
         {
-            int CharsTotal = 0;
-            string Text = "sample text 1";
-            CharsTotal += Text.Length;
-            MessageBox.Show(Text);
-            Text = "sample text 2";
-            CharsTotal += Text.Length;
-            MessageBox.Show(Text);
-            Text = "sample text 3";
-            CharsTotal += Text.Length;
-            MessageBox.Show(Text,"Average: " + Convert.ToString(CharsTotal/3) );
+            MessageBoxes();
             InitializeComponent();
             GuessNumber();
         }
@@ -43,6 +34,20 @@ namespace _0405hw
                 }
             }
             MessageBox.Show("It took me " + Convert.ToString(Attempts) + " attempts","Results");
+        }
+
+        public void MessageBoxes()
+        {
+            int CharsTotal = 0;
+            string Text = "sample text 1";
+            CharsTotal += Text.Length;
+            MessageBox.Show(Text);
+            Text = "sample text 2";
+            CharsTotal += Text.Length;
+            MessageBox.Show(Text);
+            Text = "sample text 3";
+            CharsTotal += Text.Length;
+            MessageBox.Show(Text, "Average: " + Convert.ToString(CharsTotal / 3));
         }
     }
 }
